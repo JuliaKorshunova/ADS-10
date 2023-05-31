@@ -5,12 +5,12 @@
 #include  <cstdlib>
 #include  "tree.h"
 int factorial(int n) {
-    if (n > 1) 
+    if (n > 1)
       return n * factorial(n - 1);
     return 1;
 }
 std::vector<char> getPerm(const Tree& tree, int n) {
-  if (tree.getSize() == 0 || n > factorial(tree.getSize()))
+    if (tree.getSize() == 0 || n > factorial(tree.getSize()))
         return {};
     if (tree.getCharacter_set() == '*')
         n--;
